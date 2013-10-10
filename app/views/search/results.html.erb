@@ -1,4 +1,4 @@
-<h1>Quotes submitted by <%=@user.email%></h1>
+<h1>Search Results</h1>
 
 <% @quotes.each do |q| %>
   <%= render partial: "quotes/quote", locals: {quote: q} %>

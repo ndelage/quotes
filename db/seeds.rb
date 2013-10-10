@@ -8,3 +8,5 @@ user = User.create!(email: "nate@dbc.com", password: "password", password_confir
 ].each do |q|
    user.quotes << Quote.new(body: q[0], author: q[1])
  end
+
+user.quotes << Quote.new(body: "Santa is not real", author: "Dad", published: false)

@@ -17,6 +17,8 @@ ActiveRecord::Schema.define(version: 20131010133736) do
     t.integer  "user_id"
     t.text     "body"
     t.string   "author"
+    t.integer  "upvotes",    default: 0
+    t.boolean  "published",  default: true
     t.datetime "created_at"
     t.datetime "updated_at"
   end

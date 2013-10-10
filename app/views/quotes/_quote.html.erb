@@ -1,0 +1,13 @@
+<div class="callout quote">
+  <div class="quote-body">
+    <%= quote.body.html_safe %>
+  </div>
+
+  <div class="quote-author">
+    <%= quote.author %>
+  </div>
+
+  <div class="voting">
+    <span class="vote-count"><%= quote.upvotes %></span> <%= link_to "Up Vote", upvote_path(quote) %>
+  </div>
+</div>

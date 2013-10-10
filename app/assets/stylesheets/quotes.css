@@ -19,3 +19,7 @@
   margin-top: .5em;
 }
 
+.vote-count {
+  font-size: 1.4em;
+  color: orange;
+}
