@@ -1,0 +1,21 @@
+.callout {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 50px;
+}
+
+.quote {
+  border-bottom: solid 1px black;
+}
+
+.quote-body {
+  font-size: 1.5em;
+}
+
+.quote-author {
+  font-size: 1.2em;
+  text-align: right;
+  margin-top: .5em;
+}
+

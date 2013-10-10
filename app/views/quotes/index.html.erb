@@ -1,0 +1,13 @@
+<h1>Quotes submitted by <%=@user.email%></h1>
+
+<% @quotes.each do |quote| %>
+  <div class="callout quote">
+    <div class="quote-body">
+      <%= quote.body %>
+    </div>
+
+    <div class="quote-author">
+      <%= quote.author %>
+    </div>
+  </div>
+<% end %>
