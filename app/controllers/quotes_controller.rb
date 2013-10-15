@@ -12,7 +12,7 @@ class QuotesController < ApplicationController
   end
 
   def create
-    quote = Quote.new(create_params)
+    quote = current_user.quotes.build(create_params)
 
     if quote.save
       redirect_to user_quotes_path(current_user)
