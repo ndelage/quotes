@@ -23,3 +23,7 @@
   font-size: 1.4em;
   color: orange;
 }
+
+.over-limit {
+  color: red;
+}
