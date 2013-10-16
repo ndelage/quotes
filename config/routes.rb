@@ -10,4 +10,6 @@ Quotes::Application.routes.draw do
   end
 
   resources :quotes, only: [:new, :create]
+
+  mount JasmineRails::Engine => "/specs" if defined?(JasmineRails)
 end
