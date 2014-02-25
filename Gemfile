@@ -25,3 +25,7 @@ end
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'quiet_assets'
+
+group :test, :development do
+  gem 'jasmine-rails'
+end

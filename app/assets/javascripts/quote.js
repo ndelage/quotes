@@ -1,22 +1,26 @@
-$(document).ready(function() {
-  $("#quote_body").on('keyup', function() {
-    var currentCount = $(this).val().length;
-    $("#count").html(currentCount);
+function Quote(body, author) {
+  this.body = body;
+  this.author = author;
+}
 
-    if(currentCount > 20) {
-      $("#body-length-status").addClass("over-limit");
-    } else {
-      $("#body-length-status").removeClass("over-limit");
-    }
-  });
+Quote.prototype.URL = "/quotes";
+Quote.prototype.maxLength = function() {
+  return 140;
+}
 
+Quote.prototype.isOverLimit = function() {
+  return this.body.length > this.maxLength();
+}
 
-  $("#new_quote").on('submit', function(e) {
-    e.preventDefault();
-    var form = this;
-    $.post( $(this).attr('action'),
-            $(this).serialize() ).done(function(r) {
-              form.reset();
-            });
-  });
-});
+Quote.prototype.save = function() {
+  return $.post(this.URL,
+                this.postParams());
+
+}
+
+Quote.prototype.postParams = function() {
+  return {
+            "quote[body]": this.body,
+            "quote[author]": this.author
+          };
+}
